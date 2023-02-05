@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="medify.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="swiper.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Unbounded:wght@800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Modal -->
+<div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="register">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <input placeholder="name" type="text" class="mt-2 form-control">
+            <input placeholder="surname" type="text" class="mt-2 form-control">
+            <div class="input-group flex-nowrap mt-2">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <input placeholder="e-mail" type="email" class="mt-2 form-control">
+            <input placeholder="password" type="password" class="mt-2 form-control">
+            <div class="d-flex align-items-center gap-2 my-2">
+              <input class="form-check-input mt-0" id='subs' type="checkbox">
+              <label for="subs">Mail abone ol</label>
+          </div>
+          <div class="d-flex align-items-center gap-2 my-2">
+            <input class="form-check-input mt-0" id='rules' type="checkbox">
+            <label for="rules">evet kuralları okudum</label>
+        </div>
+        </div>
+        </div>
+        <div class="modal-footer d-flex align-items-center justify-content-center">
+          <button type="button" class="btn btn-dark">Register</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="login">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <input placeholder="e-mail və ya username" type="email" class="mt-2 form-control">
+                <input placeholder="password" type="password" class="mt-2 form-control">
+                <div class="d-flex align-items-center gap-2 my-2">
+                    <input class="form-check-input mt-0" id='subss' type="checkbox">
+                    <label for="subss">Mail abone ol</label>
+                </div>
+                <div class="d-flex align-items-center gap-2 my-2">
+                  <input class="form-check-input mt-0" id='rule' type="checkbox">
+                  <label for="rule">evet kuralları okudum</label>
+              </div>
+            </div>
+            </div>
+            <div class="modal-footer d-flex align-items-center justify-content-center">
+              <button type="button" class="btn btn-dark">Login</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+       <!-- Modal -->
+       <div class="modal fade" id="post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="login">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer d-flex align-items-center justify-content-center">
+              <button type="button" class="btn btn-dark">Share</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <nav class="fixed-top navbar navbar-expand-lg">
+        <div class="container-fluid col-10">
+          <a class="navbar-brand" href="#" style="font-family: 'Unbounded', cursive;">RFCH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Join</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sponsor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#login">Login</a>
+            <button class="btn btn-dark ms-2"  data-bs-toggle="modal" data-bs-target="#register">Register</a>
+          </div>
+        </div>
+    </nav>
+    
+
+    <div class="container py-5 mt-5">
+        <div class="d-flex justify-content-between mb-2">
+            <button class="mb-3 btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              detaylı anlatım <i class="text-light bi bi-info-square-fill"></i>
+            </button>
+            <button  data-bs-toggle="modal" data-bs-target="#post" class="btn btn-dark">create support article</button>
+        </div>
+            
+
+          <div class="collapse" id="collapseExample">
+            <div class="container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloribus nemo odit nostrum, incidunt porro nihil recusandae? Consequuntur quibusdam exercitationem ducimus error odit rerum veniam tenetur cupiditate excepturi perferendis. Aliquid enim delectus, voluptatem facere pariatur nisi! Eaque quaerat repellendus, voluptatem quos delectus iusto, dolore libero, distinctio dolorum reprehenderit beatae deleniti.</p>
+                    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                      <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                          <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Free</h4>
+                          </div>
+                          <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                              <li>10 users included</li>
+                              <li>2 GB of storage</li>
+                              <li>Email support</li>
+                              <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-dark">Sign up for free</button>
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                          <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Pro</h4>
+                          </div>
+                          <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                              <li>20 users included</li>
+                              <li>10 GB of storage</li>
+                              <li>Priority email support</li>
+                              <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-4">
+                <div class="sub-card p-3  card">
+                    <div class="profile mb-3">
+                        <div class="profile d-flex align-items-center justify-content-center">
+                            <div class="pp"></div>
+                            <div class="d-flex flex-column">
+                                <h5 class="full-name">name</h5>
+                                <b class="username">@name</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paragraph-full">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur hic ad beatae rem aliquid repellat quia vel dolore blanditiis magnam possimus molestias similique a rerum provident voluptate impedit eligendi, veniam, amet enim aliquam. Expedita commodi tempore in consequatur natus at!</p>
+                      </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="sub-card p-3  card">
+                    <div class="profile mb-3">
+                        <div class="profile d-flex align-items-center justify-content-center">
+                            <div class="pp"></div>
+                            <div class="d-flex flex-column">
+                                <h5 class="full-name">name</h5>
+                                <b class="username">@name</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paragraph-full">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur hic ad beatae rem aliquid repellat quia vel dolore blanditiis magnam possimus molestias similique a rerum provident voluptate impedit eligendi, veniam, amet enim aliquam. Expedita commodi tempore in consequatur natus at!</p>
+                      </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="sub-card p-3  card">
+                    <div class="profile mb-3">
+                        <div class="profile d-flex align-items-center justify-content-center">
+                            <div class="pp"></div>
+                            <div class="d-flex flex-column">
+                                <h5 class="full-name">name</h5>
+                                <b class="username">@name</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paragraph-full">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur hic ad beatae rem aliquid repellat quia vel dolore blanditiis magnam possimus molestias similique a rerum provident voluptate impedit eligendi, veniam, amet enim aliquam. Expedita commodi tempore in consequatur natus at!</p>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           <!-- FOOTER -->
+           <footer class="w-100 py-4 flex-shrink-0">
+            <div class="container py-4">
+                <div class="row gy-4 gx-5">
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="h1 text-white">RFCH.</h5>
+                        <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                        <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">rfch.world</a></p>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white mb-3">Quick links</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Get started</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white mb-3">Quick links</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Get started</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-white mb-3">Newsletter</h5>
+                        <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-dark" id="button-addon2" type="button"><i class="bi bi-send-fill"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
